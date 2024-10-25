@@ -36,6 +36,7 @@ const handleRouteClick = (path) => {
   position: fixed;
   inset: 0;
   font-size: var(--font-xl);
+  padding-bottom: env(safe-area-inset-bottom);
 }
 
 .side-cart-svg {
