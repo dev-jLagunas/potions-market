@@ -1,0 +1,18 @@
+/* variables.css */
+@font-face {
+  font-family: "Raleway";
+  src: url("@/assets/fonts/Raleway-VariableFont_wght.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Lilita One";
+  src: url("@/assets/fonts/LilitaOne-Regular.ttf") format("truetype");
+}
+
+/************************************************
+VARIABLES
+*************************************************/
+
+:root {
+  --primary-color: purple;
+}
