@@ -10,3 +10,12 @@ CSS RESET
   padding: 0;
   box-sizing: border-box;
 }
+
+/***************************************************
+GLOBAL STYLES
+****************************************************/
+body {
+  background: var(--color-black);
+  color: var(--color-white);
+  font-family: "Raleway", sans-serif;
+}

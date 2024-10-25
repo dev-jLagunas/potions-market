@@ -1,4 +1,6 @@
-/* variables.css */
+/************************************************
+GOOGLE FONTS
+*************************************************/
 @font-face {
   font-family: "Raleway";
   src: url("@/assets/fonts/Raleway-VariableFont_wght.ttf") format("truetype");
@@ -14,5 +16,9 @@ VARIABLES
 *************************************************/
 
 :root {
-  --primary-color: purple;
+  /* COLORS */
+  --color-white: #f5f7f8;
+  --color-black: #1a1a19;
+  --color-green-dark: #31511e;
+  --color-green-light: #859f3d;
 }

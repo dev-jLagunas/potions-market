@@ -8,13 +8,7 @@
 </template>
 
 <style scoped>
-h2 {
-  color: var(--primary-color);
-  font-family: "Lilita One";
-}
-
 h1 {
-  color: red;
-  font-family: "Raleway";
+  font-size: 8rem;
 }
 </style>
