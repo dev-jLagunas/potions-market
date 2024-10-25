@@ -4,6 +4,7 @@ import TheSearchbar from "@/components/search/TheSearchbar.vue";
 import TheSidebar from "@/components/navigation/TheSidebar.vue";
 import wizardImg from "@/assets/svgs/wizard_green.svg";
 import sidebarSvg from "@/assets/svgs/sidebar_green.svg";
+import cartSvg from "@/assets/svgs/cart_green.svg";
 
 // REFS
 const isSidebarOpen = ref(false);
@@ -23,6 +24,7 @@ const toggleSidebar = () => {
       <li class="nav-link">Potions</li>
       <li class="nav-link">Faqs</li>
       <li class="nav-link">Staff</li>
+      <li><img :src="cartSvg" alt="cart img" class="nav-cart-svg" /></li>
     </ul>
     <TheSearchbar />
     <div class="nav-user-container display-col">
@@ -45,9 +47,19 @@ const toggleSidebar = () => {
   display: none;
 }
 
-.nav-link {
+.nav-link,
+.nav-cart-svg {
   font-size: var(--font-lg);
   text-align: center;
+  cursor: pointer;
+}
+
+.nav-cart-svg {
+  height: 50px;
+}
+
+.nav-cart-svg:hover {
+  animation: wiggle 0.9s both;
 }
 
 .nav-user-container {
@@ -88,6 +100,38 @@ const toggleSidebar = () => {
 
   .side-open-btn {
     display: none;
+  }
+}
+
+/* KEY FRAMES */
+@keyframes wiggle {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
   }
 }
 </style>

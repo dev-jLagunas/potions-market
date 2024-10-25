@@ -1,4 +1,5 @@
 <script setup>
+import cartSvg from "@/assets/svgs/cart_green.svg";
 // EMITS
 const emits = defineEmits(["closeSidebar"]);
 </script>
@@ -11,6 +12,7 @@ const emits = defineEmits(["closeSidebar"]);
       <li class="side-link">Potions</li>
       <li class="side-link">Faqs</li>
       <li class="side-link">Staff</li>
+      <li><img :src="cartSvg" alt="cart img" class="side-cart-svg" /></li>
     </ul>
     <button class="side-close-btn" @click="$emit('closeSidebar')">X</button>
   </aside>
@@ -22,6 +24,14 @@ const emits = defineEmits(["closeSidebar"]);
   position: fixed;
   inset: 0;
   font-size: var(--font-xl);
+}
+
+.side-cart-svg {
+  height: 50px;
+}
+
+.side-cart-svg:hover {
+  animation: wiggle 0.9s both;
 }
 
 .side-link {
@@ -62,5 +72,37 @@ const emits = defineEmits(["closeSidebar"]);
 
 .side-close-btn:hover {
   transform: scale(1.3);
+}
+
+/* KEY FRAMES */
+@keyframes wiggle {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
 }
 </style>
