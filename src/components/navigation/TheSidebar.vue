@@ -1,19 +1,31 @@
 <script setup>
+import { useRouter } from "vue-router";
 import cartSvg from "@/assets/svgs/cart_green.svg";
+
+// ROUTER
+const router = useRouter();
+
 // EMITS
 const emits = defineEmits(["closeSidebar"]);
+
+// METHODS
+const handleRouteClick = (path) => {
+  router.push(path);
+  emits("closeSidebar");
+};
 </script>
 
 <template>
   <aside class="side-container display-col">
     <ul class="side-links-container">
-      <li class="side-link">Home</li>
-      <li class="side-link">About</li>
-      <li class="side-link">Potions</li>
-      <li class="side-link">Faqs</li>
-      <li class="side-link">Staff</li>
+      <li class="side-link" @click="handleRouteClick('/')">Home</li>
+      <li class="side-link" @click="handleRouteClick('/about')">About</li>
+      <li class="side-link" @click="handleRouteClick('/potions')">Potions</li>
+      <li class="side-link" @click="handleRouteClick('/faqs')">Faqs</li>
+      <li class="side-link" @click="handleRouteClick('/staff')">Staff</li>
       <li><img :src="cartSvg" alt="cart img" class="side-cart-svg" /></li>
     </ul>
+
     <button class="side-close-btn" @click="$emit('closeSidebar')">X</button>
   </aside>
 </template>

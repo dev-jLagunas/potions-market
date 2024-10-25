@@ -19,13 +19,14 @@ const toggleSidebar = () => {
       <img :src="sidebarSvg" alt="sidebar toggle svg" class="side-open-svg" />
     </button>
     <ul class="nav-links-container display-evenly">
-      <li class="nav-link">Home</li>
-      <li class="nav-link">About</li>
-      <li class="nav-link">Potions</li>
-      <li class="nav-link">Faqs</li>
-      <li class="nav-link">Staff</li>
+      <li class="nav-link"><router-link to="/">Home</router-link></li>
+      <li class="nav-link"><router-link to="/about">About</router-link></li>
+      <li class="nav-link"><router-link to="/potions">Potions</router-link></li>
+      <li class="nav-link"><router-link to="/faqs">Faqs</router-link></li>
+      <li class="nav-link"><router-link to="/staff">Staff</router-link></li>
       <li><img :src="cartSvg" alt="cart img" class="nav-cart-svg" /></li>
     </ul>
+
     <TheSearchbar />
     <div class="nav-user-container display-col">
       <img :src="wizardImg" alt="user avatar" class="nav-user-img" />
