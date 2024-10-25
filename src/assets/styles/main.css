@@ -1,4 +1,7 @@
 @import "./variables.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 /***************************************************
 CSS RESET
@@ -18,4 +21,10 @@ body {
   background: var(--color-black);
   color: var(--color-white);
   font-family: "Raleway", sans-serif;
+  width: 90vw;
+  margin-inline: auto;
+}
+
+li {
+  list-style-type: none;
 }

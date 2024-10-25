@@ -21,4 +21,38 @@ VARIABLES
   --color-black: #1a1a19;
   --color-green-dark: #31511e;
   --color-green-light: #859f3d;
+  --color-red-light: #f95454;
+
+  /* SPACING */
+  --spacing-reg: 1rem;
+
+  /* FONT SIZING  */
+  --font-reg: 1rem;
+  --font-lg: 1.3rem;
+  --font-xl: 2rem;
+
+  /* RADIUS */
+  --radius-xs: 0.3rem;
+}
+
+/************************************************
+TAILWIND REUSABLE STYLES
+*************************************************/
+.display-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.display-evenly {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.display-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
